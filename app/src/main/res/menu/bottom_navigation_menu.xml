@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/goal_list_fragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_goals_white_24dp"
+        android:title="@string/goals" />
+    <item
+        android:id="@+id/plan_list_fragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_plans_white_24dp"
+        android:title="@string/plans" />
+    <item
+        android:id="@+id/task_list_fragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_tasks_white_24dp"
+        android:title="@string/tasks" />
+</menu>

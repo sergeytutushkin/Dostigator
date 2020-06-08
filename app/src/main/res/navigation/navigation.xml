@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/goal_list_fragment">
+
+    <fragment
+        android:id="@+id/goal_list_fragment"
+        android:name="com.example.dostigator.ui.goals.GoalListFragment"
+        android:label="@string/goals"
+        tools:layout="@layout/goal_list_fragment">
+        <action
+            android:id="@+id/action_goalListFragment_to_planListFragment"
+            app:destination="@id/plan_list_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/plan_list_fragment"
+        android:name="com.example.dostigator.ui.plans.PlanListFragment"
+        android:label="@string/plans"
+        tools:layout="@layout/plan_list_fragment">
+        <action
+            android:id="@+id/action_planListFragment_to_taskListFragment"
+            app:destination="@id/task_list_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="goalKey"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/task_list_fragment"
+        android:name="com.example.dostigator.ui.tasks.TaskListFragment"
+        android:label="@string/tasks"
+        tools:layout="@layout/task_list_fragment">
+        <argument
+            android:name="planKey"
+            app:argType="long" />
+    </fragment>
+</navigation>
