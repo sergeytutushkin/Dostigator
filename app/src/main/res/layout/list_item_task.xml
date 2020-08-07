@@ -6,18 +6,18 @@
     <data>
 
         <variable
-            name="plan"
-            type="com.example.dostigator.database.Plan" />
+            name="task"
+            type="com.example.dostigator.database.Task" />
 
         <variable
             name="clickListener"
-            type="com.example.dostigator.ui.planlist.PlanListListener" />
+            type="com.example.dostigator.ui.tasklist.TaskListListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="@{() -> clickListener.onClick(plan)}">
+        android:onClick="@{() -> clickListener.onClick(task)}">
 
         <CheckBox
             android:id="@+id/completed"
@@ -29,7 +29,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:planCompleted="@{plan}"
+            app:taskCompleted="@{task}"
             tools:checked="false" />
 
         <TextView
@@ -44,7 +44,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/completed"
             app:layout_constraintTop_toTopOf="parent"
-            app:planTitle="@{plan}"
+            app:taskTitle="@{task}"
             tools:text="Plan X" />
 
         <TextView
@@ -59,7 +59,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/completed"
             app:layout_constraintTop_toBottomOf="@+id/title"
-            app:planDescription="@{plan}"
+            app:taskDescription="@{task}"
             tools:text="Bla-bla-bla" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

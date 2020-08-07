@@ -3,11 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/plan_edit_fragment"
+        android:icon="@drawable/ic_baseline_add_white_24"
+        android:title="@string/plan_list_menu_add"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/app_bar_search"
         android:icon="@drawable/ic_search_white_24dp"
-        android:title="Search"
+        android:title="@string/plan_list_menu_search"
         app:actionViewClass="android.widget.SearchView"
-        app:showAsAction="always" />
-    <item android:title="Settings" />
-    <item android:title="About" />
+        app:showAsAction="ifRoom" />
 </menu>

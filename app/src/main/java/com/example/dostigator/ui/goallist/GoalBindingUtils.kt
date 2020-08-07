@@ -1,4 +1,4 @@
-package com.example.dostigator.ui.goals
+package com.example.dostigator.ui.goallist
 
 import android.widget.ImageView
 import android.widget.TextView

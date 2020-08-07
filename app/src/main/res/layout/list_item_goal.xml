@@ -11,7 +11,7 @@
 
         <variable
             name="clickListener"
-            type="com.example.dostigator.ui.goals.GoalListListener" />
+            type="com.example.dostigator.ui.goallist.GoalListListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

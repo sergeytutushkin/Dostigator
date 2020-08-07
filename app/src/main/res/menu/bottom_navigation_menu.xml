@@ -4,15 +4,15 @@
         android:id="@+id/goal_list_fragment"
         android:enabled="true"
         android:icon="@drawable/ic_goals_white_24dp"
-        android:title="@string/goals" />
+        android:title="@string/goal_list_navigation_label" />
     <item
         android:id="@+id/plan_list_fragment"
         android:enabled="true"
         android:icon="@drawable/ic_plans_white_24dp"
-        android:title="@string/plans" />
+        android:title="@string/plan_list_navigation_label" />
     <item
         android:id="@+id/task_list_fragment"
         android:enabled="true"
         android:icon="@drawable/ic_tasks_white_24dp"
-        android:title="@string/tasks" />
+        android:title="@string/task_list_navigation_label" />
 </menu>

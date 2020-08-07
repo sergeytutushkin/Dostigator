@@ -6,13 +6,13 @@
 
         <variable
             name="goalListViewModel"
-            type="com.example.dostigator.ui.goals.GoalListViewModel" />
+            type="com.example.dostigator.ui.goallist.GoalListViewModel" />
     </data>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.goals.GoalListFragment">
+        tools:context=".ui.goallist.GoalListFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/goal_list"

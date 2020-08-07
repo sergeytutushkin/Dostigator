@@ -1,4 +1,4 @@
-package com.example.dostigator.ui.plans
+package com.example.dostigator.ui.planlist
 
 import android.widget.CheckBox
 import android.widget.TextView

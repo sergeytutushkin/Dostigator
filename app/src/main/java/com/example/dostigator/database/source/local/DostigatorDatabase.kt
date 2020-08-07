@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.dostigator.database.*
 
-@Database(entities = [Goal::class, Plan::class, Task::class], version = 3)
+@Database(entities = [Goal::class, Plan::class, Task::class], version = 1, exportSchema = false)
 abstract class DostigatorDatabase : RoomDatabase() {
     abstract val goalDao: GoalDao
     abstract val planDao: PlanDao

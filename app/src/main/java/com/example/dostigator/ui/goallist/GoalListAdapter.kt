@@ -1,4 +1,4 @@
-package com.example.dostigator.ui.goals
+package com.example.dostigator.ui.goallist
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -1,4 +1,4 @@
-package com.example.dostigator.ui.plans
+package com.example.dostigator.ui.planlist
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

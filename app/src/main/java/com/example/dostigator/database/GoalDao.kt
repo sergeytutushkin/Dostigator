@@ -10,6 +10,9 @@ interface GoalDao {
     @Query("SELECT * FROM goals WHERE id=:id")
     fun getById(id: Long): Goal
 
+    @Query("DELETE FROM goals")
+    fun clear()
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(goal: Goal): Long
 

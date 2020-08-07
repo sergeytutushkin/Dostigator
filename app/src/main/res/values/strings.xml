@@ -1,7 +1,41 @@
 <resources>
-    <string name="app_name">Dostigator</string>
-    <string name="goals">Goals</string>
-    <string name="plans">Plans</string>
-    <string name="tasks">Tasks</string>
 
+    <!--Overflow menu start-->
+    <string name="menu_settings">Settings</string>
+    <string name="menu_about">About</string>
+    <!--Overflow menu end-->
+
+    <!--Goal list screen start-->
+    <string name="goal_list_navigation_label">Goals</string>
+    <string name="goal_list_menu_add">Add</string>
+    <!--Goal list screen end-->
+
+    <!--Goal edit screen start-->
+    <string name="goal_edit_navigation_label">Goal edit</string>
+    <string name="goal_edit_label_name">Goal name</string>
+    <string name="goal_edit_label_description">Description</string>
+    <string name="goal_edit_button_ok">Ok</string>
+    <!--Goal edit screen end-->
+
+    <!--Plan list screen start-->
+    <string name="plan_list_navigation_label">Plans</string>
+    <string name="plan_list_menu_add">Add</string>
+    <string name="plan_list_menu_search">Search</string>
+    <!--Plan list screen end-->
+
+    <!--Plan edit screen start-->
+    <string name="plan_edit_navigation_label">Plan edit</string>
+    <!--Plan edit screen end-->
+
+    <!--Task list screen start-->
+    <string name="task_list_navigation_label">Tasks</string>
+    <string name="task_list_menu_add">Add</string>
+    <string name="task_list_menu_search">Search</string>
+    <!--Task list screen end-->
+
+    <!--Task edit screen start-->
+    <string name="task_edit_navigation_label">Task edit</string>
+    <!--Task edit screen end-->
+
+    <string name="app_name">Dostigator</string>
 </resources>

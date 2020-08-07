@@ -18,15 +18,21 @@ import androidx.room.PrimaryKey
 data class Plan @JvmOverloads constructor(
 
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "id") var id: Long = 0,
+    @ColumnInfo(name = "id")
+    var id: Long = 0L,
 
+    @ColumnInfo(name = "title")
     var title: String = "",
+
+    @ColumnInfo(name = "description")
     var description: String = "",
 
 //    val startDate: Date
 //    val endDate: Date
 
-    @ColumnInfo(name = "completed") var isCompleted: Boolean = false,
+    @ColumnInfo(name = "completed")
+    var isCompleted: Boolean = false,
 
-    @ColumnInfo(name = "goal_id", index = true) var goalId: Long
+    @ColumnInfo(name = "goal_id", index = true)
+    var goalId: Long
 )

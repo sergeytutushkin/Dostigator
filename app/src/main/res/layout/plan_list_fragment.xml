@@ -7,13 +7,13 @@
 
         <variable
             name="planListViewModel"
-            type="com.example.dostigator.ui.plans.PlanListViewModel" />
+            type="com.example.dostigator.ui.planlist.PlanListViewModel" />
     </data>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.plans.PlanListFragment">
+        tools:context=".ui.planlist.PlanListFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/plan_list"
