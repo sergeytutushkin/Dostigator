@@ -8,13 +8,15 @@
     <!--Goal list screen start-->
     <string name="goal_list_navigation_label">Goals</string>
     <string name="goal_list_menu_add">Add</string>
+    <string name="goal_list_image">Image of goal</string>
+    <string name="goal_list_icon_edit">Edit icon</string>
     <!--Goal list screen end-->
 
     <!--Goal edit screen start-->
     <string name="goal_edit_navigation_label">Goal edit</string>
     <string name="goal_edit_label_name">Goal name</string>
     <string name="goal_edit_label_description">Description</string>
-    <string name="goal_edit_button_ok">Ok</string>
+    <string name="goal_edit_button_ok">OK</string>
     <!--Goal edit screen end-->
 
     <!--Plan list screen start-->
@@ -38,4 +40,5 @@
     <!--Task edit screen end-->
 
     <string name="app_name">Dostigator</string>
+    <string name="goal_list_icon_delete">Delete icon</string>
 </resources>

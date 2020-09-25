@@ -7,13 +7,13 @@
 
         <variable
             name="taskListViewModel"
-            type="com.example.dostigator.ui.tasklist.TaskListViewModel" />
+            type="com.example.dostigator.viewmodels.TaskListViewModel" />
     </data>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.tasklist.TaskListFragment">
+        tools:context=".TaskListFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/task_list"

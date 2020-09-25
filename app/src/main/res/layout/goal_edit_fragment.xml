@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.goaledit.GoalEditFragment">
+    tools:context=".GoalEditFragment">
+
+    <data>
+
+        <variable
+            name="goal"
+            type="com.example.dostigator.data.Goal" />
+
+        <variable
+            name="viewModel"
+            type="com.example.dostigator.viewmodels.GoalEditViewModel" />
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -9,34 +21,41 @@
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/goal_edit_fragment_title_field"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:hint="@string/goal_edit_label_name">
+            android:hint="@string/goal_edit_label_name"
+            app:endIconMode="clear_text">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="@={viewModel.goal.title}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/goal_edit_fragment_description_field"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:hint="@string/goal_edit_label_description">
+            android:hint="@string/goal_edit_label_description"
+            app:endIconMode="clear_text">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="@={viewModel.goal.description}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/goal_edit_fragment_ok_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:onClick="@{() -> viewModel.onSaveGoal()}"
             android:text="@string/goal_edit_button_ok" />
     </LinearLayout>
 

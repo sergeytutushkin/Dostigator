@@ -7,11 +7,11 @@
 
         <variable
             name="plan"
-            type="com.example.dostigator.database.Plan" />
+            type="com.example.dostigator.data.Plan" />
 
         <variable
             name="clickListener"
-            type="com.example.dostigator.ui.planlist.PlanListListener" />
+            type="com.example.dostigator.adapters.PlanListListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,7 +20,7 @@
         android:onClick="@{() -> clickListener.onClick(plan)}">
 
         <CheckBox
-            android:id="@+id/completed"
+            android:id="@+id/list_item_plan_completed_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -33,7 +33,7 @@
             tools:checked="false" />
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/list_item_plan_title_text"
             android:layout_width="0dp"
             android:layout_height="24dp"
             android:layout_marginStart="8dp"
@@ -42,13 +42,13 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/completed"
+            app:layout_constraintStart_toEndOf="@+id/list_item_plan_completed_checkbox"
             app:layout_constraintTop_toTopOf="parent"
             app:planTitle="@{plan}"
             tools:text="Plan X" />
 
         <TextView
-            android:id="@+id/description"
+            android:id="@+id/list_item_plan_description_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -57,8 +57,8 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/completed"
-            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintStart_toEndOf="@+id/list_item_plan_completed_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_plan_title_text"
             app:planDescription="@{plan}"
             tools:text="Bla-bla-bla" />
 

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/goal_list_fragment"
-        android:name="com.example.dostigator.ui.goallist.GoalListFragment"
+        android:name="com.example.dostigator.GoalListFragment"
         android:label="@string/goal_list_navigation_label"
         tools:layout="@layout/goal_list_fragment">
         <action
@@ -23,11 +23,15 @@
         </action>
         <action
             android:id="@+id/action_goal_list_fragment_to_goalEditFragment"
-            app:destination="@id/goal_edit_fragment" />
+            app:destination="@id/goal_edit_fragment">
+            <argument
+                android:name="goalKey"
+                app:argType="long" />
+        </action>
     </fragment>
     <fragment
         android:id="@+id/plan_list_fragment"
-        android:name="com.example.dostigator.ui.planlist.PlanListFragment"
+        android:name="com.example.dostigator.PlanListFragment"
         android:label="@string/plan_list_navigation_label"
         tools:layout="@layout/plan_list_fragment">
         <action
@@ -51,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/task_list_fragment"
-        android:name="com.example.dostigator.ui.tasklist.TaskListFragment"
+        android:name="com.example.dostigator.TaskListFragment"
         android:label="@string/task_list_navigation_label"
         tools:layout="@layout/task_list_fragment">
         <argument
@@ -64,17 +68,41 @@
     </fragment>
     <fragment
         android:id="@+id/goal_edit_fragment"
-        android:name="com.example.dostigator.ui.goaledit.GoalEditFragment"
+        android:name="com.example.dostigator.GoalEditFragment"
         android:label="@string/goal_edit_navigation_label"
-        tools:layout="@layout/goal_edit_fragment" />
+        tools:layout="@layout/goal_edit_fragment">
+        <action
+            android:id="@+id/action_goal_edit_fragment_to_goal_list_fragment"
+            app:destination="@id/goal_list_fragment" />
+        <argument
+            android:name="goalKey"
+            android:defaultValue="0L"
+            app:argType="long" />
+    </fragment>
     <fragment
         android:id="@+id/plan_edit_fragment"
-        android:name="com.example.dostigator.ui.planedit.PlanEditFragment"
+        android:name="com.example.dostigator.PlanEditFragment"
         android:label="@string/plan_edit_navigation_label"
-        tools:layout="@layout/plan_edit_fragment" />
+        tools:layout="@layout/plan_edit_fragment">
+        <action
+            android:id="@+id/action_plan_edit_fragment_to_plan_list_fragment"
+            app:destination="@id/plan_list_fragment" />
+        <argument
+            android:name="planKey"
+            android:defaultValue="0L"
+            app:argType="long" />
+    </fragment>
     <fragment
         android:id="@+id/task_edit_fragment"
-        android:name="com.example.dostigator.ui.taskedit.TaskEditFragment"
+        android:name="com.example.dostigator.TaskEditFragment"
         android:label="@string/task_edit_navigation_label"
-        tools:layout="@layout/task_edit_fragment" />
+        tools:layout="@layout/task_edit_fragment">
+        <action
+            android:id="@+id/action_task_edit_fragment_to_task_list_fragment"
+            app:destination="@id/task_list_fragment" />
+        <argument
+            android:name="taskKey"
+            android:defaultValue="0L"
+            app:argType="long" />
+    </fragment>
 </navigation>

@@ -2,17 +2,18 @@ package com.example.dostigator
 
 import android.app.Application
 import androidx.room.Room
-import com.example.dostigator.database.source.local.DostigatorDatabase
+import com.example.dostigator.data.AppDatabase
 
+// TODO Delete?
 class DostigatorApp : Application() {
 
     private lateinit var instance: DostigatorApp
-    private lateinit var database: DostigatorDatabase
+    private lateinit var database: AppDatabase
 
     override fun onCreate() {
         super.onCreate()
         instance = this
-        database = Room.databaseBuilder(this, DostigatorDatabase::class.java, "database")
+        database = Room.databaseBuilder(this, AppDatabase::class.java, "database")
             .allowMainThreadQueries()
             .build()
     }
@@ -21,7 +22,7 @@ class DostigatorApp : Application() {
         return instance
     }
 
-    fun getDatabase(): DostigatorDatabase {
+    fun getDatabase(): AppDatabase {
         return database
     }
 }

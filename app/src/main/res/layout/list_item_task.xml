@@ -7,11 +7,11 @@
 
         <variable
             name="task"
-            type="com.example.dostigator.database.Task" />
+            type="com.example.dostigator.data.Task" />
 
         <variable
             name="clickListener"
-            type="com.example.dostigator.ui.tasklist.TaskListListener" />
+            type="com.example.dostigator.adapters.TaskListListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,7 +20,7 @@
         android:onClick="@{() -> clickListener.onClick(task)}">
 
         <CheckBox
-            android:id="@+id/completed"
+            android:id="@+id/list_item_task_completed_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -33,7 +33,7 @@
             tools:checked="false" />
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/list_item_task_title_text"
             android:layout_width="0dp"
             android:layout_height="24dp"
             android:layout_marginStart="8dp"
@@ -42,13 +42,13 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/completed"
+            app:layout_constraintStart_toEndOf="@+id/list_item_task_completed_checkbox"
             app:layout_constraintTop_toTopOf="parent"
             app:taskTitle="@{task}"
             tools:text="Plan X" />
 
         <TextView
-            android:id="@+id/description"
+            android:id="@+id/list_item_task_description_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -57,8 +57,8 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/completed"
-            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintStart_toEndOf="@+id/list_item_task_completed_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_task_title_text"
             app:taskDescription="@{task}"
             tools:text="Bla-bla-bla" />
 
